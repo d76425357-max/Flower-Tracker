@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Трекер задач</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Шапка -->
+    <header class="header">
+
+        <div>
+            <h1>Трекер задач</h1>
+            <p class="subtitle">Организуйте свои задачи удобно</p>
+        </div>
+
+        <button id="themeButton" class="theme-button">
+            🌙 Тёмная тема
+        </button>
+
+    </header>
+
+
+    <!-- Статистика -->
+    <div class="stats">
+
+        <div class="stat">
+            <span id="activeCount">0</span>
+            <p>Активные</p>
+        </div>
+
+        <div class="stat">
+            <span id="completedCount">0</span>
+            <p>Выполнены</p>
+        </div>
+
+        <div class="stat">
+            <span id="totalCount">0</span>
+            <p>Всего</p>
+        </div>
+
+    </div>
+
+
+    <!-- Добавление задачи -->
+    <div class="add-task">
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Введите новую задачу..."
+        >
+
+        <select id="prioritySelect">
+            <option value="normal">Обычная</option>
+            <option value="important">Важная</option>
+            <option value="urgent">Срочная</option>
+        </select>
+
+        <select id="categorySelect">
+            <option value="normal">Обычная</option>
+            <option value="important">Важная</option>
+            <option value="urgent">Срочная</option>
+            <option value="postponed">Отложенная</option>
+        </select>
+
+        <input
+            type="date"
+            id="dateInput"
+        >
+
+        <button id="addTaskButton">
+            Добавить
+        </button>
+
+    </div>
+
+
+    <!-- Поиск -->
+    <div class="search">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Поиск задач..."
+        >
+
+    </div>
+
+
+    <!-- Фильтры -->
+    <div class="filters">
+
+        <button class="filter active" data-filter="all">
+            Все
+        </button>
+
+        <button class="filter" data-filter="active">
+            Активные
+        </button>
+
+        <button class="filter" data-filter="completed">
+            Выполненные
+        </button>
+
+        <button class="filter" data-filter="urgent">
+            🔴 Срочные
+        </button>
+
+        <button class="filter" data-filter="important">
+            🟠 Важные
+        </button>
+
+        <button class="filter" data-filter="postponed">
+            🟣 Отложенные
+        </button>
+
+    </div>
+
+
+    <!-- Список задач -->
+    <div id="taskList" class="task-list"></div>
+
+
+    <p id="emptyMessage" class="empty-message">
+        Задач пока нет
+    </p>
+
+
+    <!-- Связаться с нами -->
+    <div class="contact-us">
+
+        <h2>Связаться с нами</h2>
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                id="contactName"
+                placeholder="Ваше имя"
+                required
+            >
+
+            <input
+                type="email"
+                id="contactEmail"
+                placeholder="Ваш Email"
+                required
+            >
+
+            <textarea
+                id="contactMessage"
+                placeholder="Ваше сообщение"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Отправить сообщение
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

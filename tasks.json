@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "title": "Сделать дизайн сайта",
+        "completed": false
+    },
+    {
+        "id": 2,
+        "title": "Написать JavaScript",
+        "completed": false
+    },
+    {
+        "id": 3,
+        "title": "Проверить сайт",
+        "completed": true
+    }
+]
+
+
+
+
+
+
+
+
